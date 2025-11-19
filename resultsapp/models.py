@@ -90,7 +90,6 @@ class GradingStructure(models.Model):
 # -------------------------
 #  RESULTS
 # -------------------------
-from django.db import models
 
 class Result(models.Model):
     student = models.ForeignKey("Student", on_delete=models.CASCADE)

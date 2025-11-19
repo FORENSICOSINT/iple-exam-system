@@ -85,7 +85,7 @@ JAZZMIN_SETTINGS = {
     "default_icon_children": "fas fa-circle",
     
      "topmenu_links": [
-        {"name": "Home",  "url": "/", "permissions": ["auth.view_user"]},
+        {"name": "Home",  "url": "admin", "permissions": ["auth.view_user"]},
         {"model": "resultsapp.Student"},
         {"app": "resultsapp"},
     ],

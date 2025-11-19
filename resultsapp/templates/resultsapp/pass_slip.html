@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: "Arial"; padding: 30px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        td, th { border: 1px solid #000; padding: 8px; }
+        h2 { text-align: center; }
+    </style>
+</head>
+<body>
+
+<h2>Islamic Primary Leaving Examination (IPLE) - Pass Slip</h2>
+
+<p><strong>Name:</strong> {{ student.full_name }}</p>
+<p><strong>Index No:</strong> {{ student.index_number }}</p>
+<p><strong>School:</strong> {{ student.school.name }}</p>
+<p><strong>Year:</strong> {{ period.year }}</p>
+
+<table>
+    <tr>
+        <th>Subject</th>
+        <th>Score</th>
+        <th>Grade</th>
+        <th>Remark</th>
+    </tr>
+
+    {% for r in results %}
+    <tr>
+        <td>{{ r.subject.name }}</td>
+        <td>{{ r.score }}</td>
+        <td>{{ r.get_grade }}</td>
+        <td>{{ r.get_remark }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<p><strong>Total:</strong> {{ total }}</p>
+<p><strong>Division:</strong> {{ division }}</p>
+
+</body>
+</html>
